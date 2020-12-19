@@ -1,7 +1,6 @@
 This was the 
 
-# first
-## major project 
+# first major project 
 
 I ever took two years ago and I am really proud of it even if looking at it now makes me feel like this looks like a five minutes work..
 
@@ -19,3 +18,13 @@ I ever took two years ago and I am really proud of it even if looking at it now 
 
 ## Because I tend to loose a lot of files and I want to safeguard this one by storing it online.
 ### Also because I want something to spend my time sometimes by using basic java because I dont want to forget the syntax , so I will create branches and add stuffs which I would've added  to it if I had taken up this project now.
+
+# To run ..
+
+
+``` Bash
+javac home.java 
+```
+``` Bash
+java home
+```
