@@ -1,11 +1,11 @@
-import java.util.*;
+import java.util.Scanner;
 class home {
-    Scanner sc = new Scanner(System.in);
-    int total, a;
-    int inc, sav;
-    String[] name = new String[100];
-    int price[] = new int[100];
-    public void income() {
+    static Scanner sc = new Scanner(System.in);
+    static int total, a;
+    static int inc, sav;
+    static String[] name = new String[100];
+    static int price[] = new int[100];
+    static void income() {
         System.out.println("-------------------------------------------------------------------------------------------------------------------");
         System.out.println();
         System.out.println();
@@ -24,7 +24,7 @@ class home {
         System.out.println();
         System.out.println("-------------------------------------------------------------------------------------------------------------------");
     }
-    public void expenses() {
+    static void expenses() {
         System.out.println("enter your monthly savings");
         sav = sc.nextInt();
         System.out.println();
@@ -44,7 +44,7 @@ class home {
             System.out.println();
         }
     }
-    public void display() {
+    static void display() {
         total = sav;
         for (int c = 0; c <= a; c++)
             total = total + price[c];
@@ -63,9 +63,8 @@ class home {
         }
     }
     public static void main(String[] args) {
-        home ob = new home();
-        ob.income();
-        ob.expenses();
-        ob.display();
+        income();
+        expenses();
+        display();
     }
 }
