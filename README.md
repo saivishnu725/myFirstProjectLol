@@ -23,8 +23,8 @@ I ever took two years ago and I am really proud of it even if looking at it now 
 
 
 ``` Bash
-javac home.java 
+make 
 ```
 ``` Bash
-java home
+make run
 ```
