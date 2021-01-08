@@ -23,8 +23,8 @@ I ever took two years ago and I am really proud of it even if looking at it now 
 
 
 ``` Bash
-make 
+javac Expenses.java
 ```
 ``` Bash
-make run
+java Expenses
 ```
