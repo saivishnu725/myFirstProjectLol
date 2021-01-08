@@ -31,7 +31,7 @@ class Expenses {
     }
 
     static void result() {
-        price.forEach((n) - > save += n); // Just iterating through all n values of ArrayList price, and adding to save, instead of what you did!
+        price.forEach((n) -> save += n); // Just iterating through all n values of ArrayList price, and adding to save, instead of what you did!
 
         System.out.println("You have spent " + save + " this month!");
         System.out.println((save >= income) ? ((save - income) + " saved! Please spend less!") : ((income - save) + " saved! You have spent wisely!"));
