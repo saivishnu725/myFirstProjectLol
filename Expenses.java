@@ -6,15 +6,13 @@ class Expenses {
     
     private static int income, save, count;
 
-    private static ArrayList<String> name = new ArrayList<String>();    	// dynamic arrays instead of static ones!
+    private static ArrayList<String> name = new ArrayList<String>();    	// dynamic arrays instead of static ones.
     private static ArrayList<Integer> price = new ArrayList<Integer>(); 	// <-------------------------------------
-    
-    static void income() {
-    	System.out.print("Enter your income from all sources: ");
-    	income = input.nextInt();
-    }
-    
+
     static void expenses() {
+        System.out.print("Enter your income from all sources: ");
+    	income = input.nextInt();
+    	
         System.out.print("Enter your monthly savings: ");
         save = input.nextInt();
         
@@ -25,24 +23,24 @@ class Expenses {
         
         for (int j = 0; j < count; j++) {
             System.out.print("Name: ");
-            name.set(j, input.nextLine());
-            
+            name.add(input.next());
+
             System.out.print("Price: ");
-            price.set(j, input.nextInt());
+            price.add(input.nextInt());
+
         }
     }
     
-    static void display() {
+    static void result() {
 		price.forEach((n) -> save += n); // Just iterating through all n values of ArrayList price, and adding to save, instead of what you did!
             
         System.out.println("You have spent " + save + " this month!");
-        System.out.println((save >= income) ? save - income : income - save);
+        System.out.println((save >= income) ? ((save - income) + " saved! Please spend less!") : ((income - save) + " saved! You have spent wisely!"));
     }
     
     public static void main(String[] args) {
-    	expenses();
-    	display();
-        income();
+		expenses();
+		result();
         
         input.close(); 		// Closing the Scanner instance to prevent memory leakage.
     }
